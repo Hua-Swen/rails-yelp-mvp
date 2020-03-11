@@ -1,0 +1,7 @@
+<%= simple_form_for [@restaurant, @review] do |f| %>
+  <%= f.input :content, label: 'Review content', error: 'Review is mandatory, please specify one' %>
+  <%= f.input :rating, label: 'Rating', error: 'Rating is mandatory, and should be between 0 and 1' %>
+  <%= f.button :submit %>
+<% end %>
+
+<%= link_to "Main page", restaurants_path %>
